@@ -1,0 +1,313 @@
+(1)
+Define a class in Python to store the details of students (self,rollno,name,course) and display the class
+class Student:
+  
+    def __init__(self,rollno,name,course):
+        self.rollno=rollno
+        self.name=name
+        self.course=course
+        
+    
+    def displayStudent(self):
+        print("Roll No :  ",self.rollno)
+        print("Name :  ",self.name)
+        print("Couse: ",self.course)
+
+stud1=Student(10,"Jack","IT")
+stud2=Student(11,"Jill","CE")
+
+stud1.displayStudent()
+stud2.displayStudent()
+
+
+(2)
+Define a class in Python to store the details of students (rollNumber, Mark1, Mark2), with the following methods.
+readData() - to assign values to class attributes
+computeTotal() - find the total marks
+print_details() - to display the attribute values and the total marks
+Create an object of the class and invoke the methods
+
+class Student:
+    def readData(self):
+        self.rollno=input("Enter roll number: ")
+        self.mark1=int(input("Enter mark1: "))
+        self.mark2=int(input("Enter mark2: "))
+    def computeTotal(self):
+        self.total = self.mark1+self.mark2
+    def printDetails(self):
+        print ("\nroll number  :",self.rollno)
+        print ("Mark1        :",self.mark1)
+        print ("Mark2        :",self.mark2)
+        print ("Total Marks  :",self.total)
+S=Student()
+S.readData()
+S.computeTotal()
+S.printDetails()
+
+
+(3)
+#Create a class Student with attributes name and roll no and a method dataprint() for displaying the same. Create two instances of the class and call the method for each instance
+
+class Student:
+    def __init__(self,name,rollno):
+        self.name=name
+        self.rollno=rollno
+    def dataprint(self):
+        print ("Name       =",self.name)
+        print ("Roll number=",self.rollno)
+s1=Student("Amy",1)
+s2=Student("Ava",2)
+s1.dataprint()
+s2.dataprint()
+
+
+(4)
+Create a class Student with attributes name and roll no 
+and a method dataprint() for displaying the same. Create two instances of the class and call the method for each instance 
+
+
+class Student:
+  def __init__(self,name,rollno):
+    self.name=name
+    self.rollno=rollno
+  
+  def dataprint(self):
+    print("Name: ",self.name)
+    print("Rollno:",self.rollno)
+
+stud1=Student("Devu",10)
+stud2=Student("Vidya",11)
+
+stud1.dataprint()
+stud2.dataprint()
+
+
+
+(5)
+'''Write a Pythom program to print "hello world" automatically when the object is created '''
+
+class Hello:
+
+  def __init__(self,string):
+    self.string=string
+
+  def display(self):
+    print(self.string)
+
+disp=Hello("Hello world")
+disp.display()
+
+
+(6)
+Create a class Reactangle wit the following attributes and methods:
+Attributes:  length, width
+Methods: area(), perimeter(), and display
+Create two instances of the class and call the methods for each instance.
+Display area and perimeter along with length and width  
+
+
+class Rectangle:
+
+  def readdetails(self):
+    self.length=int(input("Enter length of rectangle: "))
+    self.breadth=int(input("Enter breadth of rectangle: "))
+  
+  def area(self):
+    self.a=(self.length)*(self.breadth)
+
+  def perimeter(self):
+    self.p=2*(self.length+self.breadth)
+
+  def printdetails(self):
+    print("Length of rectangle: ",self.length)
+    print("Breadth of rectangle: ",self.breadth)
+    print("Area of rectangle: ",self.a)
+    print("Perimeter of rectangle: ",self.p)
+
+r1=Rectangle()
+r2=Rectangle()
+
+r1.readdetails()
+r1.area()
+r1.perimeter()
+r1.printdetails()
+
+r2.readdetails()
+r2.area()
+r2.perimeter()
+r2.printdetails()
+
+
+(7)
+'''Create a class Person with atributes Name, age, salalry and a method display() for showing the details. Create two instances of the class and call the method for each instance'''
+
+class Person:
+
+  def readdetails(self):
+    self.name=input("Enter name:")
+    self.age=input("Enter age:")
+    self.salary=input("Enter salary:")
+
+  def display(self):
+    print(self.name)
+    print(self.age)
+    print(self.salary)
+
+p1=Person()
+p2=Person()
+
+p1.readdetails()
+p1.display()
+
+p2.readdetails()
+p2.display()
+
+
+(8)
+'''Define a class Mobile to store the details of a mobile (company, model, and price) with the following methods
+1. set_details() --> to set the values to the data attributes
+2. display_details()--> to display the data attribute values
+Create an object of class and invoke the methods'''
+
+class Mobile:
+ 
+  def set_details(self):
+    self.company=input("Enter company: ")
+    self.model=input("Enter model: ")
+    self.price=input("Enter price: ")
+
+  def display_details(self):
+    print("Company: ",self.company)
+    print("Model: ",self.model)
+    print("Price: ",self.price)
+
+mob1=Mobile()
+
+mob1.set_details()
+mob1.display_details()
+
+
+(9)
+'''Define a class in Python to store the details of a Ship (name, source, destination) with the following methods
+1. get_details()--> to assign values to class attributes
+2. print_details--> to display the sttribute values
+Create an object of the class and invoke the methods'''
+
+class Ship:
+  def get_details(self):
+    self.name=input("Enter name of the ship: ")
+    self.source=input("Enter the source: ")
+    self.destination=input("Enter the destination:")
+
+  def print_details(self):
+    print(self.name)
+    print(self.source)
+    print(self.destination)
+
+ship1=Ship()
+
+ship1.get_details()
+ship1.print_det
+
+
+(10)
+Define a class to represent a bank account. Include the following details like name of the depositor, account number, type of account, balance amount in the account. Write methods to assign initial values, to deposit an amount, withdraw an amount after checking the balance, to display name, account number , account type and balance  
+class Bank:
+  def initial(self):
+    print("-------------------------------------------")
+    self.depositer=input("\nName of Depositer:")
+    self.acc=int(input("Enter account number:"))
+    self.type=input("Enter account type:")
+    self.balance=int(input("Enter account balance:"))
+    print("-------------------------------------------")
+
+  def deposit(self):
+    print("-------------------------------------------")
+    self.dep=int(input("\nEnter amount to be inserted:"))
+    self.balance=self.balance+self.dep
+    print("Amount successfully deposited..")
+    print("Updated amount:",self.balance)
+    print("-------------------------------------------")
+
+  def Withdraw(self):
+    print("-------------------------------------------")
+    self.With=int(input("Enter amount to be withdrawn:"))
+    if self.With > self.balance:
+      print("Insufficent balance!!")
+    else:
+      self.balance=self.balance-self.With      print("Remaining amount:-",self.balance)
+      
+
+r011int("-------------------------------------------")
+
+  def details(self):
+    print("-------------------------------------------")
+    print("Account number:",self.acc)
+    print("Name:",self.depositer)
+    print("Account type:",self.type)
+    print("Account balance",self.balance)
+    print("-------------------------------------------")
+
+print("####Bank Details####\n\n1.Deposit\n\n2.Withdraw\n\n3.Show details")
+n=int(input("\nEnter your choice:"))
+b1=Bank()
+if n==1:
+  b1.initial()
+  b1.deposit()
+if n==2:
+  b1.initial()
+  b1.Withdraw()
+if n==3:
+  b1.initial()
+  b1.details()
+
+
+(11)
+#Create a class called Staff with staff_code and staff_name as attributes. Create two sub classes Teacher (subject, publication) Typist(speed) from parent class Staff
+class Staff:
+  def __init__(self):
+    self.staff_name=input("Enter name:")
+    self.staff_code=input("Enter code:")
+
+  def details1(self):
+    print("\n")
+    print("Staff Name:",self.staff_name)
+    print("Staff Code:", self.staff_code)
+
+class Teacher(Staff):
+  def __init__(self):
+    Staff.__init__(self)
+    self.subject=input("Enter Subject:")
+    self.pub=input("Enter publication:")
+
+  def details2(self):
+    Staff.details1(self)
+    print("subject:", self.subject)
+    print("publication:", self.pub)
+
+class Typist(Staff):
+  def __init__(self):
+    Staff.__init__(self)
+    self.sp=input("Enter typing speed:")
+
+  def details3(self):
+    Staff.details1(self)
+    print("Typing speed:", self.sp)
+
+s1=Teacher()
+s1.details2()  
+
+s2=Typist()
+s2.details3()
+
+
+
+
+
+
+
+
+
+
+
+
